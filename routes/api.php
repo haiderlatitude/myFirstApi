@@ -20,4 +20,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/', [ApiController::class, 'index']);
-Route::post('/postData', [ApiController::class, 'store']);
+Route::post('/store-device', [ApiController::class, 'store']);
+Route::put('/update-device/{id}', [ApiController::class, 'update']);
+Route::delete('/delete-device/{id}', [ApiController::class, 'destroy']);

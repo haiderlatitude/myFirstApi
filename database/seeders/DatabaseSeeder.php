@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\Device;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -12,11 +14,20 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
+        Device::create([
+            'name' => 'iPhone 14 Pro Max',
+            'color' => 'Black',
+            'model' => 2022,
+            'type' => 'Smart Phone',
+            'brand' => 'Apple',
+        ]);
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        Device::create([
+            'name' => 'Google Pixel 3',
+            'color' => 'White',
+            'model' => 2021,
+            'type' => 'Smart Phone',
+            'brand' => 'Google',
+        ]);
     }
 }
